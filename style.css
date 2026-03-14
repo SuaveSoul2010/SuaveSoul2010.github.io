@@ -343,6 +343,15 @@ ul {
     border: 1px solid var(--border-subtle);
 }
 
+.project-media-item-wide {
+    grid-column: 1 / -1;
+}
+
+.project-media-thumb-wide {
+    max-width: 80%;
+    margin: 0.25rem auto 0;
+}
+
 .project-media-caption {
     margin-top: 0.25rem;
     font-size: 0.8rem;
@@ -403,6 +412,20 @@ video.project-media-thumb {
 
 .nrc-media {
     flex: 1.4 1 0;
+}
+
+.nrc-layout-cyberrunner {
+    align-items: stretch;
+}
+
+.nrc-text-cyberrunner {
+    display: flex;
+    flex-direction: column;
+}
+
+.nrc-text-cyberrunner .project-media-item {
+    margin-top: auto;
+    padding-top: 1rem;
 }
 
 @media (max-width: 768px) {
