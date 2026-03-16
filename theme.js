@@ -48,3 +48,22 @@
   });
 })();
 
+// Blog timeline toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const previews = document.querySelectorAll('.timeline-preview');
+  previews.forEach(preview => {
+    preview.addEventListener('click', () => {
+      const full = preview.nextElementSibling;
+      full.classList.toggle('open');
+    });
+  });
+
+  const collapseBtns = document.querySelectorAll('.collapse-btn');
+  collapseBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const full = btn.parentElement;
+      full.classList.remove('open');
+    });
+  });
+});
+
