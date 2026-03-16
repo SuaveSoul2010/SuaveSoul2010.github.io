@@ -401,7 +401,7 @@ video.project-media-thumb {
 
 .nrc-layout {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     align-items: flex-start;
 }
 
@@ -431,6 +431,10 @@ video.project-media-thumb {
 @media (max-width: 768px) {
     .nrc-layout {
         flex-direction: column;
+    }
+
+    .project-media-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -595,6 +599,7 @@ video.project-media-thumb {
     margin-top: 1rem;
     padding-top: 1rem;
     border-top: 1px solid var(--border-subtle);
+    text-align: justify;
 }
 
 .timeline-full.open {
@@ -605,10 +610,10 @@ video.project-media-thumb {
     background: none;
     border: none;
     color: var(--accent);
-    font-size: 1.5rem;
+    font-size: 1rem;
     cursor: pointer;
     padding: 0;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
     display: block;
     text-align: center;
     font-family: inherit;
