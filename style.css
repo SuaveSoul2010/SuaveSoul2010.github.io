@@ -259,6 +259,17 @@ a:hover {
     text-align: justify;
 }
 
+.timeline-full .post-body {
+    text-align: justify;
+    white-space: normal;
+    font-family: inherit;
+    margin: 0;
+}
+
+.timeline-full .post-body p {
+    margin: 0.4rem 0;
+}
+
 ul {
     padding-left: 1.2rem;
     margin: 0.4rem 0;
