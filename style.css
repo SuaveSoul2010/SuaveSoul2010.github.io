@@ -267,7 +267,26 @@ a:hover {
 }
 
 .timeline-full .post-body p {
-    margin: 0.4rem 0;
+    margin: 0.75rem 0;
+}
+
+.timeline-full .post-body p + p {
+    margin-top: 1rem;
+}
+
+.timeline-full .post-body .endnotes {
+    margin-top: 1.25rem;
+}
+
+.timeline-full .post-body .endnotes p {
+    text-align: justify;
+    margin: 0.5rem 0;
+    line-height: 1.45;
+}
+
+.timeline-full .post-body .endnotes a {
+    display: inline;
+    white-space: nowrap;
 }
 
 ul {
