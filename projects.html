@@ -23,7 +23,6 @@
                     <div class="sidebar-name">Aranya Mitra</div>
                     <div class="sidebar-role">Student</div>
                     <div class="sidebar-loc">Urbana, IL</div>
-                    
                 </div>
             </div>
 
@@ -49,36 +48,40 @@
         <main class="content">
             <header class="content-header">
                 <h1 class="content-title">Projects</h1>
-                <p class="content-subtitle">
-                    A selection of robotics and coding work.
-                </p>
+                <p class="content-subtitle">A selection of robotics and coding work.</p>
             </header>
 
+            <!-- Cyberrunner -->
             <section class="section">
                 <div class="section-title">Cyberrunner</div>
                 <div class="section-body">
-                    <div class="project-card">
-                        <div class="project-card-copy">
+                    <div class="project-block">
+                        <div class="project-text">
                             <p>
-                                CyberRunner is based off the work of
-                                Thomas Bi and Raffaello D'Andrea at ETH Zürich.
-                                CyberRunner is an autonomous robot that uses reinforcement learning to guide a ball through the labyrinth board game. The ball must be manuevered around walls, while avoiding holes. Cyberrunner is a vision-based system that uses real time state estimation.
-                                You can learn more at
-                                <a href="https://www.cyberrunner.ai" target="_blank" rel="noopener noreferrer">cyberrunner.ai</a>.
+                                CyberRunner is based off the work of Thomas Bi and Raffaello D'Andrea at ETH Zürich.
+                                CyberRunner is an autonomous robot that uses reinforcement learning to guide a ball through
+                                the labyrinth board game. The ball must be manoeuvred around walls, while avoiding holes.
+                                CyberRunner is a vision-based system that uses real-time state estimation. You can learn
+                                more at <a href="https://www.cyberrunner.ai" target="_blank" rel="noopener noreferrer">cyberrunner.ai</a>.
                             </p>
-                            <figure class="project-media-item">
-                                <img src="./files/cyberrunner1.jpg" alt="Additional CyberRunner image" class="project-media-thumb project-media-thumb-top project-media-thumb-squircle">
-                            </figure>
                         </div>
 
-                        <div class="project-card-media">
-                            <figure class="project-media-item project-media-item-wide">
-                                <img src="./files/capture.png" alt="Ball detection under adverse lighting" class="project-media-thumb project-media-thumb-top project-media-thumb-squircle project-media-thumb-wide">
+                        <div class="project-media">
+                            <figure class="project-media-item">
+                                <img src="./files/capture.png" alt="Ball detection under adverse lighting"
+                                     class="project-media-thumb project-media-thumb-squircle">
                                 <figcaption class="project-media-caption">
-                                    Under adverse light conditions, a blue metal ball almost appears green, posing a significant challenge to the ball detection algorithm.
+                                    Under adverse light, a blue metal ball almost appears green — a significant challenge
+                                    for the ball detection algorithm.
                                 </figcaption>
                             </figure>
-                            <figure class="project-media-item project-media-item-video">
+
+                            <figure class="project-media-item">
+                                <img src="./files/cyberrunner1.jpg" alt="CyberRunner robot"
+                                     class="project-media-thumb project-media-thumb-squircle">
+                            </figure>
+
+                            <figure class="project-media-item project-media-item-full">
                                 <video class="project-media-thumb" controls preload="metadata">
                                     <source src="./files/cyberrunnervid.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
@@ -92,41 +95,43 @@
                 </div>
             </section>
 
+            <!-- NRC -->
             <section class="section">
                 <div class="section-title">National Robotics Competition</div>
                 <div class="section-body">
-                    <div class="project-card">
-                        <div class="project-card-copy">
+                    <div class="project-block">
+                        <div class="project-text">
                             <p>
-                                This robot was built for the Robot maze event at the
-                                <a href="https://www.thenrc.org" target="_blank" rel="noopener noreferrer">National Robotics Competition (NRC)</a> in Marion, OH. 
+                                This robot was built for the Robot Maze event at the
+                                <a href="https://www.thenrc.org" target="_blank" rel="noopener noreferrer">National Robotics Competition (NRC)</a>
+                                in Marion, OH.
                             </p>
                             <p>
-                                MazeBot was built from <a href="https://www.hiwonder.com/products/turbopi?variant=40112905388119&srsltid=AfmBOorm3yvsQdd5QC41uwfl6JK1HjVg4k_k3npjaroVBrljMFT6A6Ei" target="_blank" rel="noopener noreferrer">this kit</a>.
+                                MazeBot was built from
+                                <a href="https://www.hiwonder.com/products/turbopi?variant=40112905388119" target="_blank" rel="noopener noreferrer">this kit</a>.
                             </p>
                             <p>
-                                MazeBot's mecanum wheels allow it to strafe horizontally. With the front-mounted sonar, it can detect an opening in the wall while strafing, and then advance to the next programmed move. The movement sequence is hard-coded, unlike earlier versions that relied primarily on camera and sonar feedback. Reliable localization was a challene, mainly because of the slipping of the wheels. On solution was to deliberately overshoots openings and presses against walls to "reset" its position (hence the program is named <code>dumbdumb.py</code>).
+                                MazeBot's mecanum wheels allow it to strafe horizontally. With the front-mounted sonar,
+                                it can detect an opening in the wall while strafing, then advance to the next programmed
+                                move. The movement sequence is hard-coded, unlike earlier versions that relied primarily
+                                on camera and sonar feedback. Reliable localisation was a challenge, mainly because of
+                                wheel slipping. One solution was to deliberately overshoot openings and press against
+                                walls to "reset" its position (hence the program is named <code>dumbdumb.py</code>).
                             </p>
-                            <figure class="project-media-item">
-                                <img src="./files/nrcpic1.jpeg" alt="Robot navigating the NRC maze" class="project-media-thumb project-media-thumb-top project-media-thumb-squircle">
-                                <figcaption class="project-media-caption">
-                                    MazeBot looking glorious post-competition.
-                                </figcaption>
-                            </figure>
                         </div>
 
-                        <div class="project-card-media">
-                            <figure class="project-media-item project-media-item-video">
+                        <div class="project-media">
+                            <figure class="project-media-item">
                                 <video class="project-media-thumb" controls preload="metadata">
                                     <source src="./files/nrcvid3.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                                 <figcaption class="project-media-caption">
-                                    MazeBot successfully completing a practice run.
+                                    MazeBot completing a practice run.
                                 </figcaption>
                             </figure>
 
-                            <figure class="project-media-item project-media-item-video">
+                            <figure class="project-media-item">
                                 <video class="project-media-thumb" controls preload="metadata">
                                     <source src="./files/nrcvid2.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
@@ -135,15 +140,24 @@
                                     MazeBot at competition in Marion, OH.
                                 </figcaption>
                             </figure>
+
+                            <figure class="project-media-item project-media-item-full">
+                                <img src="./files/nrcpic1.jpeg" alt="Robot post-competition"
+                                     class="project-media-thumb project-media-thumb-squircle">
+                                <figcaption class="project-media-caption">
+                                    MazeBot looking glorious post-competition.
+                                </figcaption>
+                            </figure>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <!-- Coding -->
             <section class="section">
                 <div class="section-title">Coding</div>
                 <div class="section-body">
-                    <p>Under construction</p>
+                    <p>Under construction.</p>
                 </div>
             </section>
         </main>
