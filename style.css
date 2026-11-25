@@ -364,7 +364,6 @@ ul {
 .project-text p {
     margin: 0 0 0.6rem;
     text-align: justify;
-    hyphens: auto;
 }
 
 .project-text p:last-child {
