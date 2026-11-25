@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects – Robotics & Coding | Aranya Mitra</title>
-    <meta name="description" content="Robotics, coding, and competition projects by Aranya Mitra, including MazeBot for the National Robotics Competition.">
+    <meta name="description" content="Robotics and coding projects by Aranya Mitra, including ROS navigation on the Clearpath Jackal and EarthSense TerraSentia, CyberRunner, and MazeBot for the National Robotics Competition.">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -39,7 +39,6 @@
                 <nav class="nav">
                     <a href="index.html">Home</a>
                     <a href="projects.html" class="active">Projects</a>
-                    <a href="music.html">Music</a>
                     <a href="writing.html">Writing</a>
                 </nav>
             </div>
@@ -50,6 +49,60 @@
                 <h1 class="content-title">Projects</h1>
                 <p class="content-subtitle">A selection of robotics and coding work.</p>
             </header>
+
+            <!-- Summer robotics 2026 -->
+            <section class="section">
+                <div class="section-title">Summer Robotics 2026</div>
+                <div class="section-body">
+                    <div class="project-block">
+                        <div class="project-text">
+                            <p>
+                                Over the summer of 2026, I worked on autonomous navigation with ROS, first in
+                                simulation and then on a real robot. The code and longer write-ups are on
+                                <a href="https://github.com/SuaveSoul2010/robotics-summer-2026" target="_blank" rel="noopener noreferrer">GitHub</a>.
+                            </p>
+                            <p>
+                                The simulation work used Clearpath Robotics' Jackal in Gazebo (ROS 2 Foxy). The Jackal
+                                drives around a race track made of barriers, builds an occupancy map from its lidar,
+                                and plans a route to a goal with A*. Two of the three goals were reached. The third
+                                sits just past the end of a wall, and since the navigator simply steers toward the
+                                goal and turns away from anything in front of it, the robot spent the run inching
+                                along that same wall without ever getting past.
+                            </p>
+                            <p>
+                                The hardware work used the EarthSense TerraSentia, an agricultural robot designed to
+                                drive between rows of crops, here roaming a lab instead. Its only sensor is an Intel
+                                RealSense depth camera. The depth images feed a simple obstacle avoider, which turns
+                                away from anything closer than a meter, and an occupancy grid that a Dijkstra planner
+                                searches for routes to goals clicked in RViz. Chairs, cables and desks (sometimes unintentionally) served as
+                                obstacles.
+                            </p>
+                        </div>
+
+                        <div class="project-media">
+                            <figure class="project-media-item" style="--ar: 1.7778">
+                                <video class="project-media-thumb" controls preload="metadata"
+                                       poster="./files/summer_robotics_poster.jpg">
+                                    <source src="./files/summer_robotics.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <figcaption class="project-media-caption">
+                                    A condensed cut of the two demo videos: the Jackal in simulation, then
+                                    TerraSentia in the lab.
+                                </figcaption>
+                            </figure>
+
+                            <figure class="project-media-item" style="--ar: 1">
+                                <img src="./files/terrasentia.jpg" alt="The TerraSentia robot on the lab floor"
+                                     class="project-media-thumb">
+                                <figcaption class="project-media-caption">
+                                    TerraSentia on the lab floor, surrounded by its natural predators (office chairs).
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- Cyberrunner -->
             <section class="section">
@@ -67,21 +120,24 @@
                         </div>
 
                         <div class="project-media">
-                            <figure class="project-media-item">
+                            <figure class="project-media-item" style="--ar: 1.7778">
                                 <img src="./files/capture.png" alt="Ball detection under adverse lighting"
-                                     class="project-media-thumb project-media-thumb-squircle">
+                                     class="project-media-thumb">
                                 <figcaption class="project-media-caption">
                                     Under adverse light, a blue metal ball almost appears green — a significant challenge
                                     for the ball detection algorithm.
                                 </figcaption>
                             </figure>
 
-                            <figure class="project-media-item">
+                            <figure class="project-media-item project-media-item-portrait" style="--ar: 0.75">
                                 <img src="./files/cyberrunner1.jpg" alt="CyberRunner robot"
-                                     class="project-media-thumb project-media-thumb-squircle">
+                                     class="project-media-thumb">
+                                <figcaption class="project-media-caption">
+                                    The CyberRunner setup.
+                                </figcaption>
                             </figure>
 
-                            <figure class="project-media-item project-media-item-full">
+                            <figure class="project-media-item project-media-item-portrait" style="--ar: 0.5625">
                                 <video class="project-media-thumb" controls preload="metadata">
                                     <source src="./files/cyberrunnervid.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
@@ -104,10 +160,7 @@
                             <p>
                                 This robot was built for the Robot Maze event at the
                                 <a href="https://www.thenrc.org" target="_blank" rel="noopener noreferrer">National Robotics Competition (NRC)</a>
-                                in Marion, OH.
-                            </p>
-                            <p>
-                                MazeBot was built from
+                                in Marion, OH. MazeBot was built from
                                 <a href="https://www.hiwonder.com/products/turbopi?variant=40112905388119" target="_blank" rel="noopener noreferrer">this kit</a>.
                             </p>
                             <p>
@@ -121,7 +174,7 @@
                         </div>
 
                         <div class="project-media">
-                            <figure class="project-media-item">
+                            <figure class="project-media-item" style="--ar: 1.7778">
                                 <video class="project-media-thumb" controls preload="metadata">
                                     <source src="./files/nrcvid3.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
@@ -131,7 +184,7 @@
                                 </figcaption>
                             </figure>
 
-                            <figure class="project-media-item">
+                            <figure class="project-media-item" style="--ar: 1.7778">
                                 <video class="project-media-thumb" controls preload="metadata">
                                     <source src="./files/nrcvid2.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
@@ -141,23 +194,15 @@
                                 </figcaption>
                             </figure>
 
-                            <figure class="project-media-item project-media-item-full">
+                            <figure class="project-media-item project-media-item-portrait" style="--ar: 0.9086">
                                 <img src="./files/nrcpic1.jpeg" alt="Robot post-competition"
-                                     class="project-media-thumb project-media-thumb-squircle">
+                                     class="project-media-thumb">
                                 <figcaption class="project-media-caption">
                                     MazeBot looking glorious post-competition.
                                 </figcaption>
                             </figure>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <!-- Coding -->
-            <section class="section">
-                <div class="section-title">Coding</div>
-                <div class="section-body">
-                    <p>Under construction.</p>
                 </div>
             </section>
         </main>

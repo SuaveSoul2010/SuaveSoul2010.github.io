@@ -175,7 +175,7 @@ a:hover {
     grid-template-areas:
         "about portrait2"
         "affiliations portrait2"
-        "links updates";
+        "links portrait2";
     gap: 1.25rem;
     align-items: flex-start;
 }
@@ -204,7 +204,6 @@ a:hover {
 
 .section-about      { grid-area: about; }
 .section-affiliations { grid-area: affiliations; }
-.section-updates    { grid-area: updates; }
 .section-portrait2  { grid-area: portrait2; }
 .section-links      { grid-area: links; }
 
@@ -257,7 +256,7 @@ ul {
     margin: 0.4rem 0;
 }
 
-/* ── Links / updates ─────────────────────────────────── */
+/* ── Links ───────────────────────────────────────────── */
 .links-list {
     list-style: none;
     padding-left: 0;
@@ -290,12 +289,6 @@ ul {
 .link-icon-letterboxd { background-image: url("./files/letterboxd.svg"); }
 
 .theme-dark .link-icon-github { filter: invert(1); }
-
-.updates-list {
-    padding-left: 1.1rem;
-    margin: 0;
-    font-size: 0.9rem;
-}
 
 .updates-portrait {
     display: block;
@@ -354,9 +347,12 @@ ul {
    ══════════════════════════════════════════════════════
 
    Each project-block stacks:
-     1. project-text  — full-width prose
-     2. project-media — even 2-column grid of images/videos
-                        wide items (project-media-item-full) span both columns
+     1. project-text  — prose across the full card
+     2. project-media — one row of images/videos, all the same height
+
+   Every project-media-item sets --ar (width / height of its media).
+   Items grow in proportion to --ar, so a row of mixed portrait and
+   landscape media lines up at one height with no gaps or cropping.
 */
 
 .project-block {
@@ -365,57 +361,42 @@ ul {
     gap: 1rem;
 }
 
-/* Prose sits above the media grid, no column split */
-.project-text {
-    max-width: 72ch;
-}
-
 .project-text p {
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.6rem;
     text-align: justify;
+    hyphens: auto;
 }
 
 .project-text p:last-child {
     margin-bottom: 0;
 }
 
-/* Even 2-column grid */
 .project-media {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.6rem;
-    align-items: start;
-}
-
-/* Full-width slot — video or a single hero image */
-.project-media-item-full {
-    grid-column: 1 / -1;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
 }
 
 .project-media-item {
+    --ar: 1;
+    flex: var(--ar) 1 0;
+    min-width: 0;
     margin: 0;
 }
 
 .project-media-thumb {
     width: 100%;
     height: auto;
+    aspect-ratio: var(--ar);
+    object-fit: cover;
     display: block;
     border-radius: 0.75rem;
     border: 1px solid var(--border-subtle);
-    object-fit: cover;
-}
-
-.project-media-thumb-squircle {
-    border-radius: 1rem;
-}
-
-video.project-media-thumb {
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
+    background: #000;
 }
 
 .project-media-caption {
-    margin: 0.3rem 0 0;
+    margin: 0.35rem 0 0;
     font-size: 0.78rem;
     color: var(--muted);
     line-height: 1.4;
@@ -506,8 +487,7 @@ video.project-media-thumb {
             "about"
             "portrait2"
             "affiliations"
-            "links"
-            "updates";
+            "links";
     }
 
     .section-portrait2 {
@@ -584,14 +564,16 @@ video.project-media-thumb {
 
     .about-layout { display: block; }
 
-    /* On mobile, collapse the 2-col media grid to 1 col */
+    /* On mobile, stack media; portrait items stay narrower */
     .project-media {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: stretch;
     }
 
-    .project-media-item-full {
-        grid-column: 1;
-    }
+    .project-media-item { flex: none; }
 
-    .project-text { max-width: none; }
+    .project-media-item-portrait {
+        width: 65%;
+        align-self: center;
+    }
 }
